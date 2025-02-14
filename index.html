@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz San Valentín 💖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .mensaje-secreto {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+        }
+        .boton {
+            background-color: #ff4081;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .boton:hover {
+            background-color: #d63384;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Feliz San Valentín, mi amor 💖</h1>
+    <p>Desde el día en que te conocí, mi mundo se llenó de luz y alegría. 
+    Hoy quiero recordarte cuánto te amo y lo especial que eres para mí. 💕</p>
+    <button class="boton" onclick="mostrarSorpresa()">Haz clic para una sorpresa 🎁</button>
+    <div class="contenedor">
+        <div id="mensaje1" class="mensaje-secreto"></div>
+        <div id="mensaje2" class="mensaje-secreto"></div>
+        <div id="mensaje3" class="mensaje-secreto"></div>
+        <div id="mensaje4" class="mensaje-secreto"></div>
+        <div id="mensaje5" class="mensaje-secreto"></div>
+        <div id="mensaje6" class="mensaje-secreto"></div>
+    </div>
+    <script>
+        let mensajes = [
+            "Eres mi todo, te amo con locura 💕",
+            "Cada día contigo es un regalo 🎁",
+            "Tu sonrisa ilumina mi mundo 🌟",
+            "Eres el sueño más bonito hecho realidad 💖",
+            "No hay nada más hermoso que estar a tu lado 😍",
+            "Tus abrazos son mi refugio favorito 🤗",
+            "Eres mi persona favorita en todo el universo 🌎",
+            "Contigo cada momento es mágico ✨",
+            "Eres mi razón de ser y de sonreír 😊",
+            "Mi amor por ti crece cada día más 💓",
+            "Eres lo mejor que me ha pasado ❤️",
+            "A tu lado todo es más hermoso 💕",
+            "Eres la melodía que da ritmo a mi corazón 🎶",
+            "Cada beso tuyo es un pedacito de cielo ☁️",
+            "Mi felicidad tiene tu nombre 💘",
+            "Eres mi más bonita casualidad 💫",
+            "Nuestro amor es eterno como las estrellas ✨",
+            "Cada momento contigo es un tesoro 🎀",
+            "Tu amor es mi mejor aventura 🚀",
+            "Tenerte es mi mayor bendición 🙏",
+            "Te amo con cada latido de mi corazón 💓",
+            "Nuestro amor no tiene límites 🌌",
+            "Eres mi razón para creer en el destino 🔮",
+            "Tú y yo, para siempre 💞",
+            "Mi amor por ti es más grande que el universo 🌠"
+        ];
+        let indice = 0;
+        
+        function mostrarSorpresa() {
+            for (let i = 0; i < 6; i++) {
+                document.getElementById(`mensaje${i + 1}`).innerText = mensajes[(indice + i) % mensajes.length];
+            }
+            indice = (indice + 6) % mensajes.length;
+        }
+    </script>
+</body>
+</html>
